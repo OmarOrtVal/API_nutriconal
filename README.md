@@ -5,4 +5,4 @@
 4. Grupo:5D
 5. Especialidad: Programacion
 6. Institucion: CETis 61
-7. ![FotoOmar](static/img/Imagen_OmarOrtega.jpg)
+7. ![FotoOmar](/Imagen_OmarOrtega.jpg)
