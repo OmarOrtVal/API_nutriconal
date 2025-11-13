@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Resultado - {{ alimento.descripcion }}{% endblock %}
+
+{% block content %}
+<div class="text-center mt-4">
+    <a href="{{ url_for('index') }}" class="btn btn-outline-primary mb-4">Volver</a>
+
+    <div class="card mx-auto shadow" style="max-width: 600px;">
+        <div class="card-body">
+            <h3 class="card-title text-primary">{{ alimento.descripcion }}</h3>
+            <p><strong>Marca:</strong> {{ alimento.marca }}</p>
+            <p><strong>Categoría:</strong> {{ alimento.categoria }}</p>
+            <hr>
+            <h5 class="text-primary">Nutrientes</h5>
+            <ul class="list-group list-group-flush">
+                {% for n in alimento.nutrientes %}
+                    <li class="list-group-item">{{ n }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

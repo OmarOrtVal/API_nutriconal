@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}USDA Food Search{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="mb-4 text-primary">USDA Food Data Search</h1>
+    <p class="lead mb-4">Busca información nutricional de cualquier alimento</p>
+
+    <form action="{{ url_for('buscar') }}" method="POST" class="d-flex justify-content-center">
+        <div class="input-group input-group-lg w-50">
+            <input type="text" class="form-control" name="food_name" placeholder="Ejemplo: Apple, Milk, Rice" required>
+            <button class="btn btn-primary" type="submit">Buscar</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
